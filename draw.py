@@ -16,6 +16,8 @@ def draw_polygons( points, screen, color ):
         
     p = 0
     while p < len( points ) - 2:
+        A = [[points[p + 1][0] - points[p][0]],[points[p + 1][1] - points[p][1]],[points[p + 1][2] - points[p][2]]]
+        B = [[points[p + 2][0] - points[p+1][0]],[points[p + 2][1] - points[p+1][1]],[points[p + 2][2] - points[p+1][2]]]
         draw_line( screen, points[p][0], points[p][1],
                    points[p+1][0], points[p+1][1], color )
         draw_line( screen, points[p+1][0], points[p+1][1],
