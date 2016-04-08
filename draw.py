@@ -19,7 +19,7 @@ def draw_polygons( points, screen, color ):
         A = [[points[p + 1][0] - points[p][0]],[points[p + 1][1] - points[p][1]],[points[p + 1][2] - points[p][2]]]
         B = [[points[p + 2][0] - points[p+1][0]],[points[p + 2][1] - points[p+1][1]],[points[p + 2][2] - points[p+1][2]]]
         N = [A[1]*B[2] - A[2]*B[1], A[2]*B[0] - A[0]*B[2], A[0]*B[1] - A[1]*B[0]]
-        
+        V = [0,0,-1]
         draw_line( screen, points[p][0], points[p][1],
                    points[p+1][0], points[p+1][1], color )
         draw_line( screen, points[p+1][0], points[p+1][1],
